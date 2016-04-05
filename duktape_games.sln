@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "duktape_games", "duktape_games\duktape_games.vcxproj", "{4B8FE984-8370-48AF-93CD-7C1096A5580A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{74B49C72-82E9-4C76-B932-A57B80645431} = {74B49C72-82E9-4C76-B932-A57B80645431}
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7} = {C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}
+		{3AF54C8A-10BF-4332-9147-F68ED9862032} = {3AF54C8A-10BF-4332-9147-F68ED9862032}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "duktape", "duktape\duktape.vcxproj", "{74B49C72-82E9-4C76-B932-A57B80645431}"
 EndProject
