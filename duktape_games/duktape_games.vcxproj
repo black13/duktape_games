@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B8FE984-8370-48AF-93CD-7C1096A5580A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>duktape_games</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\jjosburn\Documents\programming\duktape_games\googletest\msvc\duktape_games/Debug;C:\Users\jjosburn\Documents\programming\duktape_games\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest_maind.lib;gtestd.lib;duktape.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="duk_test_util.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="run_tests.cpp" />
+    <ClCompile Include="test-bufferobject-dynamic-safety.cpp" />
+    <ClCompile Include="test-bufferobject-example-1.cpp" />
+    <ClCompile Include="test-bufferobject-initial.cpp" />
+    <ClCompile Include="test-bug-is-fixed-dynamic-buffer-nullptr.cpp" />
+    <ClCompile Include="test-bug-is-primitive-invalid-index-gh337.cpp" />
+    <ClCompile Include="test-bug-object-binding-proxy.cpp" />
+    <ClCompile Include="test-bug-peval-pcompile-nofile.cpp" />
+    <ClCompile Include="test-c-constructor.cpp" />
+    <ClCompile Include="test-call-method.cpp" />
+    <ClCompile Include="test-call-prop.cpp" />
+    <ClCompile Include="test-charcodeat.cpp" />
+    <ClCompile Include="test-check-require-stack-top.cpp" />
+    <ClCompile Include="test-check-require-stack.cpp" />
+    <ClCompile Include="test-check-type-mask.cpp" />
+    <ClCompile Include="test-check-type.cpp" />
+    <ClCompile Include="test-compact.cpp" />
+    <ClCompile Include="test-compile-file.cpp" />
+    <ClCompile Include="test-compile-string.cpp" />
+    <ClCompile Include="test-compile.cpp" />
+    <ClCompile Include="test-dev-cmodule-guide.cpp" />
+    <ClCompile Include="test-dev-error-fileline-blame-gh455.cpp" />
+    <ClCompile Include="test-dev-finalizer-rerun.cpp" />
+    <ClCompile Include="test-dev-finalizer-rescue-unwind.cpp" />
+    <ClCompile Include="test-dev-func-tostring.cpp" />
+    <ClCompile Include="test-dev-internal-key-access.cpp" />
+    <ClCompile Include="test-dev-internal-property-basics.cpp" />
+    <ClCompile Include="test-dev-lightfunc-toobject-varargs.cpp" />
+    <ClCompile Include="test-dev-lightfunc.cpp" />
+    <ClCompile Include="test-dev-prototype-loop.cpp" />
+    <ClCompile Include="test-dev-return-types.cpp" />
+    <ClCompile Include="test-dev-rom-builtins-1.cpp" />
+    <ClCompile Include="test-dev-valstack-checked-size-call.cpp" />
+    <ClCompile Include="test-enum.cpp" />
+    <ClCompile Include="test-equals-strict-equals.cpp" />
+    <ClCompile Include="test-errhandler.cpp" />
+    <ClCompile Include="test-error.cpp" />
+    <ClCompile Include="test-eval-file.cpp" />
+    <ClCompile Include="test-eval-strictness.cpp" />
+    <ClCompile Include="test-eval-string.cpp" />
+    <ClCompile Include="test-eval-this-binding.cpp" />
+    <ClCompile Include="test-eval.cpp" />
+    <ClCompile Include="test-external-buffer.cpp" />
+    <ClCompile Include="test-get-buffer.cpp" />
+    <ClCompile Include="test-has-prop.cpp" />
+    <ClCompile Include="test-heap-lifecycle-basic.cpp" />
+    <ClCompile Include="test-heap-stash.cpp" />
+    <ClCompile Include="test-hello-world.cpp" />
+    <ClCompile Include="test-hex.cpp" />
+    <ClCompile Include="test-indirect-eval.cpp" />
+    <ClCompile Include="test-insert.cpp" />
+    <ClCompile Include="test-instanceof.cpp" />
+    <ClCompile Include="test-is-calls.cpp" />
+    <ClCompile Include="test-is-constructor-call.cpp" />
+    <ClCompile Include="test-is-strict.cpp" />
+    <ClCompile Include="test-join.cpp" />
+    <ClCompile Include="test-json-fastpath.cpp" />
+    <ClCompile Include="test-json.cpp" />
+    <ClCompile Include="test-logging.cpp" />
+    <ClCompile Include="test-magic-modify-during-call.cpp" />
+    <ClCompile Include="test-map-string.cpp" />
+    <ClCompile Include="test-memory-funcs.cpp" />
+    <ClCompile Include="test-normalize-index.cpp" />
+    <ClCompile Include="test-pcall-method.cpp" />
+    <ClCompile Include="test-pcall-prop.cpp" />
+    <ClCompile Include="test-pcall.cpp" />
+    <ClCompile Include="test-poppers.cpp" />
+    <ClCompile Include="test-print-replacement.cpp" />
+    <ClCompile Include="test-proxy-basic.cpp" />
+    <ClCompile Include="test-push-array.cpp" />
+    <ClCompile Include="test-push-buffer-object.cpp" />
+    <ClCompile Include="test-push-buffer.cpp" />
+    <ClCompile Include="test-push-cfunc.cpp" />
+    <ClCompile Include="test-push-current-function.cpp" />
+    <ClCompile Include="test-push-duktape-buffer.cpp" />
+    <ClCompile Include="test-push-error-object.cpp" />
+    <ClCompile Include="test-push-global.cpp" />
+    <ClCompile Include="test-push-object.cpp" />
+    <ClCompile Include="test-push-sprintf.cpp" />
+    <ClCompile Include="test-push-this.cpp" />
+    <ClCompile Include="test-push-thread.cpp" />
+    <ClCompile Include="test-push-vsprintf.cpp" />
+    <ClCompile Include="test-pushers.cpp" />
+    <ClCompile Include="test-put-func-num-list.cpp" />
+    <ClCompile Include="test-put-global-string.cpp" />
+    <ClCompile Include="test-put-prop-primbase.cpp" />
+    <ClCompile Include="test-put-prop.cpp" />
+    <ClCompile Include="test-remove.cpp" />
+    <ClCompile Include="test-replace.cpp" />
+    <ClCompile Include="test-require-boolean.cpp" />
+    <ClCompile Include="test-require-buffer-data.cpp" />
+    <ClCompile Include="test-require-buffer.cpp" />
+    <ClCompile Include="test-require-c-function.cpp" />
+    <ClCompile Include="test-require-context.cpp" />
+    <ClCompile Include="test-require-int.cpp" />
+    <ClCompile Include="test-require-lstring.cpp" />
+    <ClCompile Include="test-require-null.cpp" />
+    <ClCompile Include="test-require-number.cpp" />
+    <ClCompile Include="test-require-pointer.cpp" />
+    <ClCompile Include="test-require-string.cpp" />
+    <ClCompile Include="test-require-undefined.cpp" />
+    <ClCompile Include="test-resize-buffer.cpp" />
+    <ClCompile Include="test-safe-call.cpp" />
+    <ClCompile Include="test-safe-to-string.cpp" />
+    <ClCompile Include="test-set-global-object.cpp" />
+    <ClCompile Include="test-steal-buffer.cpp" />
+    <ClCompile Include="test-substring.cpp" />
+    <ClCompile Include="test-swap.cpp" />
+    <ClCompile Include="test-thread-stash.cpp" />
+    <ClCompile Include="test-throw.cpp" />
+    <ClCompile Include="test-to-boolean.cpp" />
+    <ClCompile Include="test-to-buffer.cpp" />
+    <ClCompile Include="test-to-defaultvalue.cpp" />
+    <ClCompile Include="test-to-fixed-dynamic-buffer.cpp" />
+    <ClCompile Include="test-to-int-uint.cpp" />
+    <ClCompile Include="test-to-int32-uint32-uint16.cpp" />
+    <ClCompile Include="test-to-lstring.cpp" />
+    <ClCompile Include="test-to-null.cpp" />
+    <ClCompile Include="test-to-number.cpp" />
+    <ClCompile Include="test-to-object.cpp" />
+    <ClCompile Include="test-to-pointer.cpp" />
+    <ClCompile Include="test-to-primitive.cpp" />
+    <ClCompile Include="test-to-string.cpp" />
+    <ClCompile Include="test-to-undefined.cpp" />
+    <ClCompile Include="test-trim.cpp" />
+    <ClCompile Include="test-typedarray-set-overlap.cpp" />
+    <ClCompile Include="test-types.cpp" />
+    <ClCompile Include="test-validate-index.cpp" />
+    <ClCompile Include="test-xcopy-xmove.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="duktape.h" />
+    <ClInclude Include="duk_config.h" />
+    <ClInclude Include="duk_test_util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
